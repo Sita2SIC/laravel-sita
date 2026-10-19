@@ -1,71 +1,16 @@
 <!--
-
-
-
-
-
-
-
-
 =========================================================
 * Volt Pro - Premium Bootstrap 5 Dashboard
 =========================================================
-
-
-
-
-
-
-
-
 * Product Page: https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard
 * Copyright 2021 Themesberg (https://www.themesberg.com)
 * License (https://themesberg.com/licensing)
-
-
-
-
-
-
-
-
 * Designed and coded by https://themesberg.com
-
-
-
-
-
-
-
-
 =========================================================
-
-
-
-
-
-
-
-
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. Please contact us to request a removal.
-
-
-
-
-
-
-
-
 -->
 <!DOCTYPE html>
 <html lang="en">
-
-
-
-
-
-
-
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -74,13 +19,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="title" content="Volt - Free Bootstrap 5 Dashboard">
     <meta name="author" content="Themesberg">
-
-
-
-
-
-
-
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="120x120" href="{{asset('assets-admin/img/favicon/apple-touch-icon.png')}}">
@@ -91,32 +29,10 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
 
-
-
-
-
-
-
-
     <!-- Volt CSS -->
     <link type="text/css" href="{{asset('assets-admin/css/volt.css') }}" rel="stylesheet">
 
-
-
-
-
-
-
-
 </head>
-
-
-
-
-
-
-
-
 <body>
     <nav class="navbar navbar-dark navbar-theme-primary px-4 col-12 d-lg-none">
         <a class="navbar-brand me-lg-5" href="../../index.html">
@@ -128,14 +44,6 @@
             </button>
         </div>
     </nav>
-
-
-
-
-
-
-
-
     <nav id="sidebarMenu" class="sidebar d-lg-block bg-gray-800 text-white collapse" data-simplebar>
         <div class="sidebar-inner px-4 pt-3">
             <div class="user-card d-flex d-md-none align-items-center justify-content-between justify-content-md-center pb-4">
@@ -182,14 +90,6 @@
                         <span class="sidebar-text">Dashboard</span>
                     </a>
                 </li>
-
-
-
-
-
-
-
-
                 <li class="nav-item  active ">
             <a href="{{route('pelanggan.index')}}" class="nav-link">
                 <span class="sidebar-icon">
@@ -200,22 +100,6 @@
                 <span class="sidebar-text">Pelanggan</span>
             </a>
         </li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 <li role="separator" class="dropdown-divider mt-4 mb-3 border-gray-700"></li>
                 <li class="nav-item">
                     <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/getting-started/quick-start/" target="_blank" class="nav-link d-flex align-items-center">
