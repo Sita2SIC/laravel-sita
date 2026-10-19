@@ -3,9 +3,17 @@
 
 
 
+
+
+
+
 =========================================================
 * Volt Pro - Premium Bootstrap 5 Dashboard
 =========================================================
+
+
+
+
 
 
 
@@ -17,7 +25,15 @@
 
 
 
+
+
+
+
 * Designed and coded by https://themesberg.com
+
+
+
+
 
 
 
@@ -27,7 +43,15 @@
 
 
 
+
+
+
+
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. Please contact us to request a removal.
+
+
+
+
 
 
 
@@ -39,6 +63,10 @@
 
 
 
+
+
+
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!-- Primary Meta Tags -->
@@ -46,6 +74,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="title" content="Volt - Free Bootstrap 5 Dashboard">
     <meta name="author" content="Themesberg">
+
+
+
+
 
 
 
@@ -62,13 +94,25 @@
 
 
 
+
+
+
+
     <!-- Volt CSS -->
     <link type="text/css" href="{{asset('assets-admin/css/volt.css') }}" rel="stylesheet">
 
 
 
 
+
+
+
+
 </head>
+
+
+
+
 
 
 
@@ -84,6 +128,10 @@
             </button>
         </div>
     </nav>
+
+
+
+
 
 
 
@@ -138,6 +186,10 @@
 
 
 
+
+
+
+
                 <li class="nav-item  active ">
             <a href="{{route('pelanggan.index')}}" class="nav-link">
                 <span class="sidebar-icon">
@@ -148,6 +200,14 @@
                 <span class="sidebar-text">Pelanggan</span>
             </a>
         </li>
+
+
+
+
+
+
+
+
 
 
 
@@ -184,7 +244,15 @@
 
 
 
+
+
+
+
     <main class="content">
+
+
+
+
 
 
 
@@ -323,6 +391,10 @@
 
 
 
+
+
+
+
         <div class="py-4">
             <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
                 <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
@@ -351,6 +423,10 @@
 
 
 
+
+
+
+
         <div class="row">
             <div class="col-12 mb-4">
                 <div class="card border-0 shadow components-section">
@@ -368,6 +444,10 @@
 
 
 
+
+
+
+
                                     <!-- Last Name -->
                                     <div class="mb-3">
                                         <label for="last_name" class="form-label">Last name</label>
@@ -378,12 +458,20 @@
 
 
 
+
+
+
+
                                 <div class="col-lg-4 col-sm-6">
                                     <!-- Birthday -->
                                     <div class="mb-3">
                                         <label for="birthday" class="form-label">Birthday</label>
                                         <input type="date" id="birthday" class="form-control" name="birthday">
                                     </div>
+
+
+
+
 
 
 
@@ -403,6 +491,10 @@
 
 
 
+
+
+
+
                                 <div class="col-lg-4 col-sm-12">
                                     <!-- Email -->
                                     <div class="mb-3">
@@ -413,11 +505,19 @@
 
 
 
+
+
+
+
                                     <!-- Phone -->
                                     <div class="mb-3">
                                         <label for="phone" class="form-label">Phone</label>
                                         <input type="text" id="phone" class="form-control" name="phone">
                                     </div>
+
+
+
+
 
 
 
@@ -435,9 +535,17 @@
 
 
 
+
+
+
+
                 </div>
             </div>
         </div>
+
+
+
+
 
 
 
@@ -471,9 +579,17 @@
 
 
 
+
+
+
+
     <!-- Core -->
     <script src="{{ asset('assets-admin/vendor/@popperjs/core/dist/umd/popper.min.js') }}"></script>
     <script src="{{ asset('assets-admin/vendor/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+
+
+
+
 
 
 
