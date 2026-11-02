@@ -1,65 +1,107 @@
 <?php
 
+
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+
 use App\Models\User;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Rule;
+
+
 class UserController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    // PERTEMUAN 7 - CRUD USER: Menampilkan seluruh data User (READ).
     public function index()
     {
-        $data['dataUser'] = User::all();
-		return view('admin.user.index',$data);
+        $dataUser = User::all();
+
+
+        return view('admin.user.index', compact('dataUser'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+
+    // PERTEMUAN 7 - CRUD USER: Menampilkan form tambah User (CREATE).
     public function create()
     {
         return view('admin.user.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
+
+    // PERTEMUAN 7 - CRUD USER: Memvalidasi dan menyimpan User baru.
     public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            'name' => 'required|string|max:100',
+            'email' => 'required|email|unique:users,email',
+            'password' => 'required|min:8|confirmed',
+        ]);
+        $data['password'] = Hash::make($request->password);
+        User::create($data);
+        return redirect()
+            ->route('user.index')
+            ->with('success', 'Data User berhasil ditambahkan!');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+
+    // PERTEMUAN 7 - CRUD USER: Mengambil data User untuk form edit.
+    public function edit($id)
     {
-        //
+        $user = User::findOrFail($id);
+
+
+        return view('admin.user.edit', compact('user'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
+
+    // PERTEMUAN 7 - CRUD USER: Memvalidasi dan memperbarui data User.
+    public function update(Request $request, $id)
     {
-        //
+        $user = User::findOrFail($id);
+
+
+        $data = $request->validate([
+            'name' => 'required|string|max:100',
+            'email' => [
+                'required',
+                'email',
+                Rule::unique('users', 'email')->ignore($user->id),
+            ],
+            // Password boleh kosong saat edit. Jika diisi, minimal 8 karakter
+            // dan harus sama dengan password_confirmation.
+            'password' => 'nullable|min:8|confirmed',
+        ]);
+
+
+        // Password lama dipertahankan jika kolom password tidak diisi.
+        if ($request->filled('password')) {
+            $data['password'] = Hash::make($request->password);
+        } else {
+            unset($data['password']);
+        }
+
+
+        $user->update($data);
+
+
+        return redirect()
+            ->route('user.index')
+            ->with('success', 'Data User berhasil diperbarui!');
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
+    // PERTEMUAN 7 - CRUD USER: Menghapus data User (DELETE).
+    public function destroy($id)
     {
-        //
+        $user = User::findOrFail($id);
+        $user->delete();
+
+
+        return redirect()
+            ->route('user.index')
+            ->with('success', 'Data User berhasil dihapus!');
     }
 }
+
+

@@ -43,7 +43,7 @@
                                     @endforeach
                                 </ul>
                             </div>
-                        @endif
+                            @endif
                             <div class="row mb-4">
                                 <div class="col-lg-4 col-sm-6">
                                     <!-- First Name -->
@@ -127,5 +127,3 @@
         </div>
         <!-- end main content -->
 @endsection
-
-
